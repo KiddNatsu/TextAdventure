@@ -4,7 +4,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 
-public class TextAdventureGame {
+public class Main {
     
     public static void main(String[] args) {
         
@@ -14,6 +14,9 @@ public class TextAdventureGame {
         
         // Game variables - to be set later
         
+        
+        Assassin a1 = new Assassin();
+        System.out.println(a1.health);
         
     }
 
