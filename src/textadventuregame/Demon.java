@@ -8,12 +8,16 @@ public class Demon extends Enemy {
     
     public Demon() {
         maxHealth = 150;
-        health = rand.nextInt(maxHealth);
+        maxAttackDamage = 35;
     }
 
     @Override
     public int enemyAttack() {
-        return rand.nextInt(35);
+        return rand.nextInt(maxAttackDamage);
     }
     
+    @Override
+    public String toString() {
+        return "Demon";
+    }
 }

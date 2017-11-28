@@ -8,12 +8,16 @@ public class Assassin extends Enemy {
     
     public Assassin() {
         maxHealth = 30;
-        health = rand.nextInt(maxHealth);
+        maxAttackDamage = 50;
     }
     
     @Override
     public int enemyAttack() {
-        return rand.nextInt(50);
+        return rand.nextInt(maxAttackDamage);
     }
     
+    @Override
+    public String toString() {
+        return "Assassin";
+    }
 }

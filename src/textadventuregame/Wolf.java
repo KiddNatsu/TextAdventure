@@ -8,12 +8,16 @@ public class Wolf extends Enemy {
     
     public Wolf() {
         maxHealth = 45;
-        health = rand.nextInt(maxHealth);
+        maxAttackDamage = 20;
     }
     
     @Override
     public int enemyAttack() {
-        return rand.nextInt(20);      
+        return rand.nextInt(maxAttackDamage);      
     }
     
+    @Override
+    public String toString() {
+        return "Wolf";
+    }
 }

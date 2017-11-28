@@ -3,8 +3,7 @@ package textadventuregame;
 public abstract class Enemy {
     
     int maxHealth;
-    int health;
-    int attackDamage;
+    int maxAttackDamage;
     int dropRate;
    
     // Each enemy will have different attack

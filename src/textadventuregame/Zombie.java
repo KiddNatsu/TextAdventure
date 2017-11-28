@@ -8,12 +8,16 @@ public class Zombie extends Enemy {
     
     public Zombie() {
         maxHealth = 75;
-        health = rand.nextInt(maxHealth);
+        maxAttackDamage = 15;
     }
     
     @Override
     public int enemyAttack() {
-        return rand.nextInt(15);
+        return rand.nextInt(maxAttackDamage);
     }
     
+    @Override
+    public String toString() {
+        return "Zombie";
+    }
 }
