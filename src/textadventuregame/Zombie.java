@@ -9,6 +9,7 @@ public class Zombie extends Enemy {
     public Zombie() {
         maxHealth = 75;
         maxAttackDamage = 15;
+        dropRate = 0.4f;
     }
     
     @Override

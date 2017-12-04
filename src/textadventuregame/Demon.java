@@ -9,6 +9,7 @@ public class Demon extends Enemy {
     public Demon() {
         maxHealth = 150;
         maxAttackDamage = 35;
+        dropRate = 0.25f;
     }
 
     @Override

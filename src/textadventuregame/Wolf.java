@@ -9,6 +9,7 @@ public class Wolf extends Enemy {
     public Wolf() {
         maxHealth = 45;
         maxAttackDamage = 20;
+        dropRate = 0.15f;
     }
     
     @Override

@@ -9,6 +9,7 @@ public class Assassin extends Enemy {
     public Assassin() {
         maxHealth = 30;
         maxAttackDamage = 50;
+        dropRate = 0.5f;
     }
     
     @Override
