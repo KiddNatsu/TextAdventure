@@ -17,6 +17,7 @@ public class Main {
         Enemy[] enemies = { new Assassin(), new Demon(), new Wolf(), 
             new Zombie() };
         int killCount = 0;
+        int killsForCaveEntry = 3;
         boolean running = true;
                 
         GAME: // Game starts here
@@ -125,6 +126,65 @@ public class Main {
                             "!\n");
                         Thread.sleep(1000);
                     }
+                    
+                    // Cave block
+                    if (killCount == killsForCaveEntry) {
+                        System.out.println("\t> You reach the entrance of a cave...\n");
+                        Thread.sleep(1000);
+                        System.out.println("\tWhat would you like to do?");
+                        System.out.println("\t1. Enter cave");
+                        System.out.println("\t2. Keep running past cave");
+                        Thread.sleep(1000);
+                        
+                        input = in.nextLine();
+                        if (input.equals("1")) {
+                            System.out.println("\t> You enter the cave cautiously.");
+                            Thread.sleep(1500);
+                            System.out.println("\t> As you make your way further into the cave you see a light shining down.");
+                            Thread.sleep(2500);
+                            System.out.println("\t> Beneath the light sits a vintage treause chest...\n");
+                            Thread.sleep(1500);
+                            System.out.println("\tWhat would you like to do?");
+                            Thread.sleep(1000);                            
+                            System.out.println("\t1. Open it!");
+                            System.out.println("\t2. Attack it!");
+                            System.out.println("\t3. Run away!");
+                            Thread.sleep(1000);
+                            
+                            input = in.nextLine();
+                            if (input.equals("1")) {
+                                System.out.println("\tChoose weapon goes here...");
+                                Thread.sleep(1000);     
+                                System.out.println("\t> You exit the cave.\n");
+                                Thread.sleep(1000);
+                            }
+                            else if (input.equals("2")) {
+                                System.out.println("\t> Nothing happens.");
+                                Thread.sleep(1000);
+                                System.out.println("\t> You exit the cave.\n");
+                                Thread.sleep(1000);                                
+                            }
+                            else if (input.equals("3")) {
+                                System.out.println("\t> You exit the cave.\n");   
+                                Thread.sleep(1000);
+                            }
+                            else {
+                                System.out.println("\t> Invalid input");
+                                Thread.sleep(1000);
+                                System.out.println("\t> You exit the cave.\n");
+                                Thread.sleep(1000);
+                            }
+                        }
+                        else if (input.equals("2")) {
+                            Thread.sleep(1000);
+                            System.out.println();
+                            break;
+                        }
+                        else {
+                            
+                        }
+                    }
+                    
                     System.out.println("\tWhat would you like to do next?");
                     System.out.println("\t1. Keep running");
                     System.out.println("\t2. Rest for the night (replenish some "
@@ -192,5 +252,5 @@ public class Main {
         }
         
     }
-
+    
 }
